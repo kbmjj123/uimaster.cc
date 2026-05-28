@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+      background: #0d1117;
+      display: flex;
+    }
+
+    /* ── 左侧：效果截图 60% ── */
+    .preview-pane {
+      width: 720px;
+      height: 630px;
+      background: #161b22;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    /* 背景网格装饰 */
+    .preview-pane::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99,179,237,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,179,237,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* 顶部彩色光晕 */
+    .preview-pane::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(99,179,237,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .preview-img-wrap {
+      position: relative;
+      z-index: 1;
+      width: 620px;
+      height: 390px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(99,179,237,.2),
+        0 8px 32px rgba(0,0,0,.6),
+        0 0 80px rgba(99,179,237,.08);
+    }
+
+    .preview-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #0d1117;
+      display: block;
+    }
+
+    /* ── 右侧：文字信息 40% ── */
+    .info-pane {
+      flex: 1;
+      height: 630px;
+      padding: 48px 44px 40px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 1px solid rgba(255,255,255,.06);
+      background: linear-gradient(160deg, #161b22 0%, #0d1117 100%);
+    }
+
+    /* 顶部：站点品牌 */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #63b3ed, #9f7aea);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    /* 中间：内容区 */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      padding: 24px 0;
+    }
+
+    /* 分类 tag */
+    .category-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: rgba(99,179,237,.12);
+      border: 1px solid rgba(99,179,237,.25);
+      font-size: 12px;
+      font-weight: 600;
+      color: #63b3ed;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .category-tag .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #63b3ed;
+      flex-shrink: 0;
+    }
+
+    /* 效果标题 */
+    .effect-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #f0f6fc;
+      line-height: 1.3;
+      letter-spacing: -.3px;
+      /* 最多显示 2 行 */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 描述文字 */
+    .effect-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(240,246,252,.45);
+      /* 最多 3 行 */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 技术标签组 */
+    .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      padding: 3px 10px;
+      border-radius: 6px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      font-size: 11px;
+      color: rgba(240,246,252,.55);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* 底部：装饰线 */
+    .footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(99,179,237,.3), transparent);
+    }
+
+    .footer-text {
+      font-size: 11px;
+      color: rgba(240,246,252,.2);
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 左侧：效果预览截图 -->
+  <div class="preview-pane">
+    <div class="preview-img-wrap">
+      <img id="preview-img" src="" alt="effect preview">
+    </div>
+  </div>
+
+  <!-- 右侧：文字信息 -->
+  <div class="info-pane">
+    <!-- 品牌 -->
+    <div class="brand">
+      <div class="brand-icon">✦</div>
+      <span class="brand-name">HTML Effects Gallery</span>
+    </div>
+
+    <!-- 内容 -->
+    <div class="content">
+      <div class="category-tag">
+        <span class="dot"></span>
+        <span id="og-category">Canvas</span>
+      </div>
+      <h1 class="effect-title" id="og-title">Effect Title</h1>
+      <p class="effect-desc" id="og-desc">A beautiful HTML effect.</p>
+      <div class="tags-row" id="og-tags"></div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="footer-line"></div>
+      <span class="footer-text">html-effects.gallery</span>
+    </div>
+  </div>
+
+  <script>
+    // 从 window.__OG_DATA__ 注入数据（Puppeteer 通过 page.evaluate 写入）
+    window.__applyOgData__ = function(data) {
+      if (!data) return;
+
+      // 截图（base64）
+      if (data.screenshotBase64) {
+        document.getElementById('preview-img').src =
+          'data:image/png;base64,' + data.screenshotBase64;
+      }
+
+      // 标题
+      if (data.title) {
+        document.getElementById('og-title').textContent = data.title;
+      }
+
+      // 分类
+      if (data.category) {
+        document.getElementById('og-category').textContent = data.category;
+      }
+
+      // 描述
+      if (data.description) {
+        document.getElementById('og-desc').textContent = data.description;
+      }
+
+      // 技术标签
+      if (data.tags && data.tags.length > 0) {
+        const container = document.getElementById('og-tags');
+        container.innerHTML = data.tags
+          .slice(0, 5)
+          .map(t => `<span class="tag">${t}</span>`)
+          .join('');
+      }
+    };
+
+    // 如果数据已就位，立即应用
+    if (window.__OG_DATA__) {
+      window.__applyOgData__(window.__OG_DATA__);
+    }
+  </script>
+</body>
+</html>
