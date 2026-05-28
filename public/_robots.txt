@@ -1,0 +1,20 @@
+# robots.txt — uimaster.cc
+# https://uimaster.cc/robots.txt
+
+# 允许所有爬虫访问站点
+User-agent: *
+Allow: /
+
+# 禁止爬取已处理完成的原始 HTML demo 文件（noindex 页面，避免重复内容）
+Disallow: /demos/done/
+Disallow: /demos/official/
+Disallow: /demos/community/
+
+# 禁止爬取内部 API 路由
+Disallow: /api/
+
+# 禁止爬取管理路径
+Disallow: /admin/
+
+# sitemap 位置
+Sitemap: https://uimaster.cc/sitemap.xml
