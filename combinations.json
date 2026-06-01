@@ -1,0 +1,1991 @@
+[
+  {
+    "query": "Healthcare App Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-healthcare-app",
+    "style": "Neumorphism",
+    "product": "Healthcare App",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-saas-general",
+    "style": "Glassmorphism",
+    "product": "SaaS (General)",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-e-commerce-luxury",
+    "style": "Glassmorphism",
+    "product": "E-commerce Luxury",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-fintechcrypto",
+    "style": "Glassmorphism",
+    "product": "Fintech/Crypto",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-smart-homeiot-dashboard",
+    "style": "Glassmorphism",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-financial-dashboard",
+    "style": "Dark Mode (OLED)",
+    "product": "Financial Dashboard",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-fintechcrypto",
+    "style": "Dark Mode (OLED)",
+    "product": "Fintech/Crypto",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-smart-homeiot-dashboard",
+    "style": "Dark Mode (OLED)",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-fitnessgym-app",
+    "style": "Dark Mode (OLED)",
+    "product": "Fitness/Gym App",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-educational-app",
+    "style": "Claymorphism",
+    "product": "Educational App",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-saas-general",
+    "style": "Flat Design",
+    "product": "SaaS (General)",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-micro-saas",
+    "style": "Flat Design",
+    "product": "Micro SaaS",
+    "is_recommended": true,
+    "priority": 1,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-saas-general",
+    "style": "Minimalism & Swiss Style",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-micro-saas",
+    "style": "Minimalism & Swiss Style",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-e-commerce",
+    "style": "Minimalism & Swiss Style",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-e-commerce-luxury",
+    "style": "Minimalism & Swiss Style",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-financial-dashboard",
+    "style": "Minimalism & Swiss Style",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-analytics-dashboard",
+    "style": "Minimalism & Swiss Style",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-healthcare-app",
+    "style": "Minimalism & Swiss Style",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-educational-app",
+    "style": "Minimalism & Swiss Style",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-portfoliopersonal",
+    "style": "Minimalism & Swiss Style",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-fintechcrypto",
+    "style": "Minimalism & Swiss Style",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-smart-homeiot-dashboard",
+    "style": "Minimalism & Swiss Style",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-restaurantfood-service",
+    "style": "Minimalism & Swiss Style",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a minimalist landing page. Use: white space, geometric layouts, sans-serif fonts, high contrast, grid-based structure, essential elements only. Avoid shadows and gradients. Focus on clarity and functionality.",
+    "filename": "minimalism-swiss-style-fitnessgym-app",
+    "style": "Minimalism & Swiss Style",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-saas-general",
+    "style": "Neumorphism",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-micro-saas",
+    "style": "Neumorphism",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-e-commerce",
+    "style": "Neumorphism",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-e-commerce-luxury",
+    "style": "Neumorphism",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-financial-dashboard",
+    "style": "Neumorphism",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-analytics-dashboard",
+    "style": "Neumorphism",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-educational-app",
+    "style": "Neumorphism",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-portfoliopersonal",
+    "style": "Neumorphism",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-fintechcrypto",
+    "style": "Neumorphism",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-smart-homeiot-dashboard",
+    "style": "Neumorphism",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-restaurantfood-service",
+    "style": "Neumorphism",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Create a neumorphic UI with soft 3D effects. Use light pastels, rounded corners (12-16px), subtle soft shadows (multiple layers), no hard lines, monochromatic color scheme with light/dark variations. Embossed/debossed effect on interactive elements.",
+    "filename": "neumorphism-fitnessgym-app",
+    "style": "Neumorphism",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-micro-saas",
+    "style": "Glassmorphism",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-e-commerce",
+    "style": "Glassmorphism",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-financial-dashboard",
+    "style": "Glassmorphism",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-analytics-dashboard",
+    "style": "Glassmorphism",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-healthcare-app",
+    "style": "Glassmorphism",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-educational-app",
+    "style": "Glassmorphism",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-portfoliopersonal",
+    "style": "Glassmorphism",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-restaurantfood-service",
+    "style": "Glassmorphism",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a glassmorphic interface with frosted glass effect. Use backdrop blur (10-20px), translucent overlays (rgba 10-30% opacity), vibrant background colors, subtle borders, light source reflection, layered depth. Perfect for modern overlays and cards.",
+    "filename": "glassmorphism-fitnessgym-app",
+    "style": "Glassmorphism",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-saas-general",
+    "style": "Brutalism",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-micro-saas",
+    "style": "Brutalism",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-e-commerce",
+    "style": "Brutalism",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-e-commerce-luxury",
+    "style": "Brutalism",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-financial-dashboard",
+    "style": "Brutalism",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-analytics-dashboard",
+    "style": "Brutalism",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-healthcare-app",
+    "style": "Brutalism",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-educational-app",
+    "style": "Brutalism",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-portfoliopersonal",
+    "style": "Brutalism",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-fintechcrypto",
+    "style": "Brutalism",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-smart-homeiot-dashboard",
+    "style": "Brutalism",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-restaurantfood-service",
+    "style": "Brutalism",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Create a brutalist design with raw, unpolished, stark aesthetic. Use pure primary colors (red, blue, yellow), black & white, no smooth transitions (instant), sharp corners, bold large typography, visible grid lines, default system fonts, intentional 'broken' design elements.",
+    "filename": "brutalism-fitnessgym-app",
+    "style": "Brutalism",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-saas-general",
+    "style": "Dark Mode (OLED)",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-micro-saas",
+    "style": "Dark Mode (OLED)",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-e-commerce",
+    "style": "Dark Mode (OLED)",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-e-commerce-luxury",
+    "style": "Dark Mode (OLED)",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-analytics-dashboard",
+    "style": "Dark Mode (OLED)",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-healthcare-app",
+    "style": "Dark Mode (OLED)",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-educational-app",
+    "style": "Dark Mode (OLED)",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-portfoliopersonal",
+    "style": "Dark Mode (OLED)",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Create an OLED-optimized dark interface with deep black (#000000), dark grey (#121212), midnight blue accents. Use minimal glow effects, vibrant neon accents (green, blue, gold, purple), high contrast text. Optimize for eye comfort and OLED power saving.",
+    "filename": "dark-mode-oled-restaurantfood-service",
+    "style": "Dark Mode (OLED)",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-saas-general",
+    "style": "Claymorphism",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-micro-saas",
+    "style": "Claymorphism",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-e-commerce",
+    "style": "Claymorphism",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-e-commerce-luxury",
+    "style": "Claymorphism",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-financial-dashboard",
+    "style": "Claymorphism",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-analytics-dashboard",
+    "style": "Claymorphism",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-healthcare-app",
+    "style": "Claymorphism",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-portfoliopersonal",
+    "style": "Claymorphism",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-fintechcrypto",
+    "style": "Claymorphism",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-smart-homeiot-dashboard",
+    "style": "Claymorphism",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-restaurantfood-service",
+    "style": "Claymorphism",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a playful, toy-like interface with soft 3D, chunky elements, bubbly aesthetic, rounded edges (16-24px), thick borders (3-4px), double shadows (inner + outer), pastel colors, smooth animations. Perfect for children's apps and creative tools.",
+    "filename": "claymorphism-fitnessgym-app",
+    "style": "Claymorphism",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-saas-general",
+    "style": "Aurora UI",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-micro-saas",
+    "style": "Aurora UI",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-e-commerce",
+    "style": "Aurora UI",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-e-commerce-luxury",
+    "style": "Aurora UI",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-financial-dashboard",
+    "style": "Aurora UI",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-analytics-dashboard",
+    "style": "Aurora UI",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-healthcare-app",
+    "style": "Aurora UI",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-educational-app",
+    "style": "Aurora UI",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-portfoliopersonal",
+    "style": "Aurora UI",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-fintechcrypto",
+    "style": "Aurora UI",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-smart-homeiot-dashboard",
+    "style": "Aurora UI",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-restaurantfood-service",
+    "style": "Aurora UI",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.",
+    "filename": "aurora-ui-fitnessgym-app",
+    "style": "Aurora UI",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-e-commerce",
+    "style": "Flat Design",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-e-commerce-luxury",
+    "style": "Flat Design",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-financial-dashboard",
+    "style": "Flat Design",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-analytics-dashboard",
+    "style": "Flat Design",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-healthcare-app",
+    "style": "Flat Design",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-educational-app",
+    "style": "Flat Design",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-portfoliopersonal",
+    "style": "Flat Design",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-fintechcrypto",
+    "style": "Flat Design",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-smart-homeiot-dashboard",
+    "style": "Flat Design",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-restaurantfood-service",
+    "style": "Flat Design",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Create a flat, 2D interface with bold colors, no shadows/gradients, clean lines, simple geometric shapes, icon-heavy, typography-focused, minimal ornamentation. Use 4-6 solid, bright colors in a limited palette with high saturation.",
+    "filename": "flat-design-fitnessgym-app",
+    "style": "Flat Design",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-saas-general",
+    "style": "Skeuomorphism",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-micro-saas",
+    "style": "Skeuomorphism",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-e-commerce",
+    "style": "Skeuomorphism",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-e-commerce-luxury",
+    "style": "Skeuomorphism",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-financial-dashboard",
+    "style": "Skeuomorphism",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-analytics-dashboard",
+    "style": "Skeuomorphism",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-healthcare-app",
+    "style": "Skeuomorphism",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-educational-app",
+    "style": "Skeuomorphism",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-portfoliopersonal",
+    "style": "Skeuomorphism",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-fintechcrypto",
+    "style": "Skeuomorphism",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-smart-homeiot-dashboard",
+    "style": "Skeuomorphism",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-restaurantfood-service",
+    "style": "Skeuomorphism",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a realistic, textured interface with 3D depth, real-world metaphors (leather, wood, metal), complex gradients (8-12 stops), realistic shadows, grain/texture overlays, tactile press animations. Perfect for premium/luxury products.",
+    "filename": "skeuomorphism-fitnessgym-app",
+    "style": "Skeuomorphism",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-saas-general",
+    "style": "Neubrutalism",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-micro-saas",
+    "style": "Neubrutalism",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-e-commerce",
+    "style": "Neubrutalism",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-e-commerce-luxury",
+    "style": "Neubrutalism",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-financial-dashboard",
+    "style": "Neubrutalism",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-analytics-dashboard",
+    "style": "Neubrutalism",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-healthcare-app",
+    "style": "Neubrutalism",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-educational-app",
+    "style": "Neubrutalism",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-portfoliopersonal",
+    "style": "Neubrutalism",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-fintechcrypto",
+    "style": "Neubrutalism",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-smart-homeiot-dashboard",
+    "style": "Neubrutalism",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-restaurantfood-service",
+    "style": "Neubrutalism",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a neubrutalist interface. Use: high contrast, hard black borders (3px+), bright pop colors, no blur, sharp or slightly rounded corners, bold typography, hard shadows (offset 4px 4px), raw aesthetic but functional.",
+    "filename": "neubrutalism-fitnessgym-app",
+    "style": "Neubrutalism",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-saas-general",
+    "style": "Exaggerated Minimalism",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-micro-saas",
+    "style": "Exaggerated Minimalism",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-e-commerce",
+    "style": "Exaggerated Minimalism",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-e-commerce-luxury",
+    "style": "Exaggerated Minimalism",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-financial-dashboard",
+    "style": "Exaggerated Minimalism",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-analytics-dashboard",
+    "style": "Exaggerated Minimalism",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-healthcare-app",
+    "style": "Exaggerated Minimalism",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-educational-app",
+    "style": "Exaggerated Minimalism",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-portfoliopersonal",
+    "style": "Exaggerated Minimalism",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-fintechcrypto",
+    "style": "Exaggerated Minimalism",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-smart-homeiot-dashboard",
+    "style": "Exaggerated Minimalism",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-restaurantfood-service",
+    "style": "Exaggerated Minimalism",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design with exaggerated minimalism. Use: oversized typography (clamp 3rem-12rem), extreme negative space, black/white primary, single accent color only, bold statements, minimal elements, dramatic contrast.",
+    "filename": "exaggerated-minimalism-fitnessgym-app",
+    "style": "Exaggerated Minimalism",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-saas-general",
+    "style": "Bento Grids",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-micro-saas",
+    "style": "Bento Grids",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-e-commerce",
+    "style": "Bento Grids",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-e-commerce-luxury",
+    "style": "Bento Grids",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-financial-dashboard",
+    "style": "Bento Grids",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-analytics-dashboard",
+    "style": "Bento Grids",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-healthcare-app",
+    "style": "Bento Grids",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-educational-app",
+    "style": "Bento Grids",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-portfoliopersonal",
+    "style": "Bento Grids",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-fintechcrypto",
+    "style": "Bento Grids",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-smart-homeiot-dashboard",
+    "style": "Bento Grids",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-restaurantfood-service",
+    "style": "Bento Grids",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a Bento Grid layout. Use: modular grid system, rounded corners (16-24px), different card sizes (1x1, 2x1, 2x2), card-based hierarchy, soft backgrounds (#F5F5F7), subtle borders, content-first, Apple-style aesthetic.",
+    "filename": "bento-grids-fitnessgym-app",
+    "style": "Bento Grids",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-saas-general",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-micro-saas",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-e-commerce",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-e-commerce-luxury",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-financial-dashboard",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-analytics-dashboard",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-healthcare-app",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-educational-app",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-portfoliopersonal",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-fintechcrypto",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-smart-homeiot-dashboard",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-restaurantfood-service",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a Kinetic Brutalism mobile app. Canvas: #09090B. Primary accent: Acid Yellow #DFE104 (text: #000000). Typography: Space Grotesk BOLD. Display text: 60–120pt, uppercase, letterSpacing -1, lineHeight 0.9–1.1x. Body: 18–20pt. Labels: 12pt uppercase letterSpacing +2. Add infinite marquee rows (Reanimated, no easing, hard edge clip). Hero text parallax on scroll (Interpolate: scale 1.0→1.3, opacity 1→0). Card press: instantly flood to #DFE104 + flip text to #000. Haptic Medium on every press. 0px radius. 2px solid borders. NO shadows. No gradients. Scale all fonts by (windowWidth / 375 * size) for responsiveness.",
+    "filename": "kinetic-brutalism-mobile-fitnessgym-app",
+    "style": "Kinetic Brutalism (Mobile)",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-saas-general",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-micro-saas",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-e-commerce",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-e-commerce-luxury",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-financial-dashboard",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-analytics-dashboard",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-healthcare-app",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-educational-app",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-portfoliopersonal",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-fintechcrypto",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-smart-homeiot-dashboard",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-restaurantfood-service",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a Flat Mobile app. NO shadows (shadowOpacity: 0, elevation: 0). Color creates all hierarchy. Sections: full-width View blocks alternating contrasting bg colors (Blue Hero → White Content → Gray Block). Buttons: solid #3B82F6, borderRadius 8, height 56. Cards: backgroundColor #FFFFFF (on gray bg) or #DBEAFE (blue tint) — no shadow. Text: fontWeight 800 letterSpacing -0.5 (heads), 600 (sub), 400 (body). Inputs: #F3F4F6 bg, focused: borderWidth 2 borderColor #3B82F6. Icons: Lucide strokeWidth 2.5 inside solid colored square/circle. Press feedback: scale 0.97 Pressable. Use position absolute low-opacity geometric shapes (circles, rotated squares) as background decoration.",
+    "filename": "flat-design-mobile-touch-first-fitnessgym-app",
+    "style": "Flat Design Mobile (Touch-First)",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-saas-general",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-micro-saas",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-e-commerce",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-e-commerce-luxury",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-financial-dashboard",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-analytics-dashboard",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-healthcare-app",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-educational-app",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-portfoliopersonal",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-fintechcrypto",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-smart-homeiot-dashboard",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-restaurantfood-service",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a Mobile Neo-Brutalist app. Background: Cream #FFFDF5. All content blocks: white or violet with borderWidth 4 borderColor #000. Shadows are solid offset blocks (no blur) using an extra View behind offset by 4px or 8px. Typography: Space Grotesk Bold/Black only (700–900). Buttons: 56px tall, 4px border, 0 radius; press animation translates button to cover the shadow. Cards slightly rotated (-1deg, 2deg). Colors: Hot Red #FF6B6B for primary, Yellow #FFD93D for focus/badges, Soft Violet #C4B5FD as tertiary. Animation: spring/linear only, no ease-out luxury motion.",
+    "filename": "neo-brutalism-mobile-fitnessgym-app",
+    "style": "Neo Brutalism (Mobile)",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-saas-general",
+    "style": "Claymorphism (Mobile)",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-micro-saas",
+    "style": "Claymorphism (Mobile)",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-e-commerce",
+    "style": "Claymorphism (Mobile)",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-e-commerce-luxury",
+    "style": "Claymorphism (Mobile)",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-financial-dashboard",
+    "style": "Claymorphism (Mobile)",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-analytics-dashboard",
+    "style": "Claymorphism (Mobile)",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-healthcare-app",
+    "style": "Claymorphism (Mobile)",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-educational-app",
+    "style": "Claymorphism (Mobile)",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-portfoliopersonal",
+    "style": "Claymorphism (Mobile)",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-fintechcrypto",
+    "style": "Claymorphism (Mobile)",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-smart-homeiot-dashboard",
+    "style": "Claymorphism (Mobile)",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-restaurantfood-service",
+    "style": "Claymorphism (Mobile)",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a high-fidelity Claymorphism mobile app. Background #F4F1FA (cool lavender-white, never pure white). Primary CTA: LinearGradient #A78BFA to #7C3AED, borderRadius 20, height 56. Cards: borderRadius 32, backgroundColor rgba(255,255,255,0.7) with BlurView. Multi-layer shadow: outer offset(12,12) rgba(160,150,180,0.2) + highlight offset(-8,-8) white. Typography: Nunito Black 900 for headings (48px hero, 32px section, 22px card), DM Sans Medium 500 for body 16px. Spring animations: scale 0.92 on press, spring back damping 10. Background blobs drift ±20px over 8–10s. Bento 2-column grid with hero card spanning full width. Haptics.impactAsync Light on every button press.",
+    "filename": "claymorphism-mobile-fitnessgym-app",
+    "style": "Claymorphism (Mobile)",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "SaaS (General) Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-saas-general",
+    "style": "Neumorphism (Mobile)",
+    "product": "SaaS (General)",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Micro SaaS Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-micro-saas",
+    "style": "Neumorphism (Mobile)",
+    "product": "Micro SaaS",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-e-commerce",
+    "style": "Neumorphism (Mobile)",
+    "product": "E-commerce",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "E-commerce Luxury Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-e-commerce-luxury",
+    "style": "Neumorphism (Mobile)",
+    "product": "E-commerce Luxury",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Financial Dashboard Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-financial-dashboard",
+    "style": "Neumorphism (Mobile)",
+    "product": "Financial Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Analytics Dashboard Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-analytics-dashboard",
+    "style": "Neumorphism (Mobile)",
+    "product": "Analytics Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Healthcare App Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-healthcare-app",
+    "style": "Neumorphism (Mobile)",
+    "product": "Healthcare App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Educational App Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-educational-app",
+    "style": "Neumorphism (Mobile)",
+    "product": "Educational App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Portfolio/Personal Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-portfoliopersonal",
+    "style": "Neumorphism (Mobile)",
+    "product": "Portfolio/Personal",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fintech/Crypto Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-fintechcrypto",
+    "style": "Neumorphism (Mobile)",
+    "product": "Fintech/Crypto",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Smart Home/IoT Dashboard Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-smart-homeiot-dashboard",
+    "style": "Neumorphism (Mobile)",
+    "product": "Smart Home/IoT Dashboard",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Restaurant/Food Service Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-restaurantfood-service",
+    "style": "Neumorphism (Mobile)",
+    "product": "Restaurant/Food Service",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  },
+  {
+    "query": "Fitness/Gym App Design a Neumorphism (Soft UI) mobile app. Entire background is a single color #E0E5EC (Cool Clay). No other background colors. Dual shadows: outer dark shadowColor rgba(163,177,198,0.7) offset(6,6) radius 10 + outer light #FFFFFF offset(-6,-6) radius 10 using nested View or react-native-shadow-2. Extruded (convex) for resting buttons and cards. Inset (concave) for inputs and pressed states. Buttons: height 56, borderRadius 16, scale 0.97 on press with shadow opacity→0.4, Haptics.impactAsync Light. Cards: padding 24, borderRadius 32, nested inner icon container uses inset style. Inputs: height 50, borderRadius 16, backgroundColor #E0E5EC (NOT white), inset depth effect, focus borderColor #6C63FF width 1.5. Typography: Plus Jakarta Sans Bold or System. Heading 24–32pt, body 16pt, caption 12pt, letterSpacing -0.5 for headings. Animation: 250ms Bezier(0.4,0,0.2,1). No black shadows, no pure white backgrounds.",
+    "filename": "neumorphism-mobile-fitnessgym-app",
+    "style": "Neumorphism (Mobile)",
+    "product": "Fitness/Gym App",
+    "is_recommended": false,
+    "priority": 2,
+    "exists": false
+  }
+]

@@ -34,18 +34,35 @@ DEMOS_DIR = ROOT / "public" / "demos" / "official"
 META_DIR = ROOT / "public" / "meta"
 PROMPTS_DIR = ROOT / "prompts"
 SCRIPTS_DIR = ROOT / "scripts"
+CSV_DIR = ROOT / "scripts" / "data"  # 本地 CSV 源文件
 
-# ui-ux-pro-max search.py 路径（自动查找）
+# ui-ux-pro-max search.py 路径
 def find_search_py():
-    result = subprocess.run(
-        ['find', os.path.expanduser('~'), '-name', 'search.py',
-         '-path', '*/ui-ux-pro-max/*'],
-        capture_output=True, text=True
-    )
-    paths = [p for p in result.stdout.strip().split('\n') if p]
-    return paths[0] if paths else None
+    # 优先找本地 scripts/data 同级 scripts/ 下的 search.py
+    local_search = SCRIPTS_DIR / "search.py"
+    if local_search.exists():
+        return str(local_search)
+    # 回退：找 ui-ux-pro-max 插件（5 秒超时）
+    try:
+        result = subprocess.run(
+            ['find', os.path.expanduser('~'), '-name', 'search.py',
+             '-path', '*/ui-ux-pro-max/*'],
+            capture_output=True, text=True, timeout=5
+        )
+        paths = [p for p in result.stdout.strip().split('\n') if p]
+        src_paths = [p for p in paths if '/src/' in p]
+        return src_paths[0] if src_paths else (paths[0] if paths else None)
+    except subprocess.TimeoutExpired:
+        return None
 
-SEARCH_PY = find_search_py()
+# 惰性加载，避免 import 时全目录搜索
+_SEARCH_PY_CACHE = None
+
+def get_search_py():
+    global _SEARCH_PY_CACHE
+    if _SEARCH_PY_CACHE is None:
+        _SEARCH_PY_CACHE = find_search_py()
+    return _SEARCH_PY_CACHE
 
 # 热门风格（MVP 优先覆盖）
 TOP_STYLES = [
@@ -81,22 +98,27 @@ def ensure_dirs():
 # ============ 1. CSV 转 JSON ============
 
 def convert_csv():
-    """把官方 CSV 文件全部转为 JSON，输出到 public/data/"""
+    """把 CSV 文件全部转为 JSON，输出到 public/data/"""
     ensure_dirs()
 
-    # 查找官方 CSV 所在目录
-    csv_search = subprocess.run(
-        ['find', os.path.expanduser('~'), '-name', 'styles.csv',
-         '-path', '*/ui-ux-pro-max/*'],
-        capture_output=True, text=True
-    )
-    csv_paths = [p for p in csv_search.stdout.strip().split('\n') if p]
-    if not csv_paths:
-        print("❌ 找不到官方 CSV 文件，请确认 ui-ux-pro-max 已安装")
-        return
-
-    csv_dir = Path(csv_paths[0]).parent
-    print(f"✓ 找到 CSV 目录：{csv_dir}")
+    # 优先用本地 scripts/data/，回退搜索 ui-ux-pro-max
+    if CSV_DIR.exists() and any(CSV_DIR.glob('*.csv')):
+        csv_dir = CSV_DIR
+        print(f"✓ 使用本地 CSV 目录：{csv_dir}")
+    else:
+        csv_search = subprocess.run(
+            ['find', os.path.expanduser('~'), '-name', 'styles.csv',
+             '-path', '*/ui-ux-pro-max/*'],
+            capture_output=True, text=True
+        )
+        csv_paths = [p for p in csv_search.stdout.strip().split('\n') if p]
+        if not csv_paths:
+            print("❌ 找不到 CSV 文件，请运行 cp 命令复制到 scripts/data/")
+            return
+        # 优先选择 src/ 路径
+        src_csv = [p for p in csv_paths if '/src/' in p]
+        csv_dir = Path((src_csv or csv_paths)[0]).parent
+        print(f"✓ 找到远程 CSV 目录：{csv_dir}")
 
     files = [
         'styles', 'colors', 'typography', 'products',
@@ -233,7 +255,7 @@ def generate_prompts():
     """为每个待生成的组合创建提示词文件"""
     ensure_dirs()
 
-    if not SEARCH_PY:
+    if not get_search_py():
         print("❌ 找不到 search.py，请确认 ui-ux-pro-max 已安装")
         return
 
@@ -260,7 +282,7 @@ def generate_prompts():
 
         # 调用 search.py 获取设计系统参数
         result = subprocess.run(
-            ['python3', SEARCH_PY, combo['query'],
+            ['python3', get_search_py(), combo['query'],
              '--design-system', '-f', 'markdown'],
             capture_output=True, text=True
         )

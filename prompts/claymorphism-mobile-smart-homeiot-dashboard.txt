@@ -1,0 +1,80 @@
+你是一个专业的 HTML/CSS 开发者，请根据以下设计系统参数，生成一个完整的单文件 HTML 落地页。
+
+## 设计系统参数（严格遵守，不要修改色值和风格核心参数）
+
+## Design System: SMART HOME/IOT DASHBOARD DESIGN A HIGH-FIDELITY CLAYMORPHISM MOBILE APP. BACKGROUND #F4F1FA (COOL LAVENDER-WHITE, NEVER PURE WHITE). PRIMARY CTA: LINEARGRADIENT #A78BFA TO #7C3AED, BORDERRADIUS 20, HEIGHT 56. CARDS: BORDERRADIUS 32, BACKGROUNDCOLOR RGBA(255,255,255,0.7) WITH BLURVIEW. MULTI-LAYER SHADOW: OUTER OFFSET(12,12) RGBA(160,150,180,0.2) + HIGHLIGHT OFFSET(-8,-8) WHITE. TYPOGRAPHY: NUNITO BLACK 900 FOR HEADINGS (48PX HERO, 32PX SECTION, 22PX CARD), DM SANS MEDIUM 500 FOR BODY 16PX. SPRING ANIMATIONS: SCALE 0.92 ON PRESS, SPRING BACK DAMPING 10. BACKGROUND BLOBS DRIFT ±20PX OVER 8–10S. BENTO 2-COLUMN GRID WITH HERO CARD SPANNING FULL WIDTH. HAPTICS.IMPACTASYNC LIGHT ON EVERY BUTTON PRESS.
+
+### Pattern
+- **Name:** Video-First Hero
+- **Conversion Focus:** 86% higher engagement with video. Add captions for accessibility. Compress video for performance.
+- **CTA Placement:** Overlay on video (center/bottom) + Bottom section
+- **Color Strategy:** Dark overlay 60% on video. Brand accent for CTA. White text on dark.
+- **Sections:** 1. Hero with video background, 2. Key features overlay, 3. Benefits section, 4. CTA
+
+### Style
+- **Name:** Claymorphism (Mobile)
+- **Mode Support:** Light ✓ Light | Dark ⚠ Dark (adjusted)
+- **Keywords:** claymorphism, clay, 3d, soft, bubbly, candy, playful, rounded, squish, tactile, inflate, silicone, haptic, spring
+- **Best For:** Children education apps, teen social products, crypto gamification, creative tools, brand mascot-led apps
+- **Performance:** ⚠ Moderate–Heavy (shadows+blur) | **Accessibility:** ✓ WCAG AA (careful)
+
+### Colors
+| Role | Hex | CSS Variable |
+|------|-----|--------------|
+| Primary | `#18181B` | `--color-primary` |
+| On Primary | `#FFFFFF` | `--color-on-primary` |
+| Secondary | `#27272A` | `--color-secondary` |
+| Accent/CTA | `#F8FAFC` | `--color-accent` |
+| Background | `#000000` | `--color-background` |
+| Foreground | `#FAFAFA` | `--color-foreground` |
+| Muted | `#181818` | `--color-muted` |
+| Border | `#3F3F46` | `--color-border` |
+| Destructive | `#EF4444` | `--color-destructive` |
+| Ring | `#18181B` | `--color-ring` |
+
+*Notes: Pure black + white contrast*
+
+### Typography
+- **Heading:** Inter
+- **Body:** Playfair Display
+- **Mood:** bold typography, editorial, poster, near-black, vermillion, luxury, type-as-hero, manifesto, high-contrast
+- **Best For:** Creative brand flagships, reading platforms, event apps, flash pages, luxury mobile experiences
+- **Google Fonts:** https://fonts.google.com/share?selection.family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400|JetBrains+Mono:wght@400|Playfair+Display:ital@1
+- **CSS Import:**
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400&family=Playfair+Display:ital@1&display=swap');
+```
+
+### Key Effects
+Multi-layer shadow stacks (nested View) to simulate clay depth, LinearGradient #A78BFA→#7C3AED buttons, borderRadius 40–50 outer / 32 cards / 20 buttons, Reanimated spring squish (scale 0.92 on press), BlurView glass-clay hybrid cards, floating blobs with slow ±20px drift, Haptics Light on every press
+
+### Avoid (Anti-patterns)
+- Excessive decoration
+- Pure white backgrounds
+
+### Pre-Delivery Checklist
+- [ ] No emojis as icons (use SVG: Heroicons/Lucide)
+- [ ] cursor-pointer on all clickable elements
+- [ ] Hover states with smooth transitions (150-300ms)
+- [ ] Light mode: text contrast 4.5:1 minimum
+- [ ] Focus states visible for keyboard nav
+- [ ] prefers-reduced-motion respected
+- [ ] Responsive: 375px, 768px, 1024px, 1440px
+
+## 页面要求
+
+- 产品类型：Smart Home/IoT Dashboard
+- 所有 CSS 写在 <style> 标签里，不使用外部 CSS 文件
+- Google Fonts 用 @import 引入
+- 页面区块（按顺序）：
+  1. 导航栏：Logo + 菜单链接 + 行动按钮
+  2. Hero 区域：大标题 + 副标题 + 2 个 CTA 按钮 + 配图
+  3. 功能卡片 ×3：每张有图标 + 标题 + 描述
+  4. 用户评价 ×2：头像 + 姓名 + 职位 + 评价内容 + 星级
+  5. 底部 CTA：标题 + 注册/行动按钮
+  6. 页脚：版权信息 + 链接
+- 占位图片使用：https://placehold.co/600x400
+- 不使用任何 JS 框架（Vue / React / Alpine 等）
+- 视觉效果要精美，达到可以直接展示给客户的水准
+- 严格按照设计系统的色值、字体、风格实现
+- 只输出完整的 HTML 代码，不要任何解释文字
