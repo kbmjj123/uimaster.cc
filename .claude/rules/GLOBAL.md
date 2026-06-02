@@ -20,54 +20,33 @@ uimaster/
 ├── CLAUDE.md
 ├── PRD.md
 ├── CONTRIBUTING.md
-├── generate.js                  # HTML Effects 自动化流水线
+├── generate.js                  # 统一数据流水线（design + effects）
 ├── og-template.html             # OG Image 合成模板
 ├── .claude/rules/
 ├── pages/
-│   ├── index.vue                # 首页（Design System Preview 入口）
+│   ├── index.vue                # 首页（选择器 + 预览 + 卡片网格）
 │   ├── preview/[slug].vue
 │   ├── compare/[slug].vue
 │   ├── styles/[style].vue
-│   ├── how-to-use.vue
-│   └── effects/
-│       ├── index.vue            # HTML Effects 画廊首页
-│       ├── [id].vue             # 特效详情页
-│       ├── category/[category].vue
-│       └── scene/[scene].vue
+│   └── how-to-use.vue
 ├── components/
 │   ├── StyleSelector.vue
 │   ├── ProductSelector.vue
-│   ├── DemoPreview.vue          # Design System iframe 预览
+│   ├── DemoPreview.vue          # iframe 预览
 │   ├── DownloadBtn.vue
 │   ├── AdSlot.vue
-│   ├── EffectCard.vue           # 静图/动图切换卡片
-│   ├── EffectPreview.vue        # srcdoc 注入 iframe
-│   ├── CodeEditor.vue           # Monaco/CodeMirror
-│   └── ShareUnlockModal.vue     # 分享解锁弹窗
+│   ├── DemoCard.vue             # 封面卡片（首页 Layer 2）
+│   └── DemoCardGrid.vue         # 卡片网格容器
 ├── composables/
 │   ├── useBM25.ts
 │   ├── useDesignSystem.ts
 │   ├── useMasterMd.ts
-│   ├── useDemos.ts
-│   └── useExportLimit.ts        # 导出计数 + 分享解锁
-├── server/api/
-│   ├── effects/index.get.ts
-│   ├── effects/[id].get.ts
-│   ├── effects/[id]/view.post.ts
-│   ├── effects/[id]/export.post.ts
-│   ├── share/create.post.ts
-│   ├── share/verify/[token].get.ts
-│   ├── share/visit/[token].get.ts
-│   └── sitemap.xml.get.ts
+│   └── useDemos.ts
 ├── public/
 │   ├── data/                    # JSON（Design System）
 │   ├── demos/official/
-│   ├── demos/community/
 │   └── meta/
-├── migrations/
-│   └── 0001_create_html_effects.sql
-├── demos/                       # 待处理 HTML（generate.js）
-├── demos/done/
+├── covers/                      # 本地临时（不进 git）
 └── scripts/scripts.py           # Design System 数据处理
 ```
 
@@ -111,10 +90,10 @@ NUXT_PUBLIC_ADSENSE_ID=ca-pub-xxxxxxxxxx
 ## 禁止事项
 
 - ❌ 不直接修改 `public/data/*.json`（由脚本生成）
-- ❌ 不在 `public/demos/` 里修改已有 HTML 文件
-- ❌ 不使用 localStorage / sessionStorage（Effects Gallery 导出计数除外）
+- ❌ 不在 `public/demos/official/` 里修改已有 HTML 文件（仅 generate.js canonical 注入时可写）
+- ❌ 封面图片不提交 git（`covers/` 本地临时，R2 是持久层）
+- ❌ 不使用 localStorage / sessionStorage
 - ❌ 不引入重量级 UI 组件库（shadcn 除外）
-- ❌ 不在 Design System iframe 内注入任何脚本
-- ❌ 不在 Effects Gallery iframe 内注入来自外部的脚本（srcdoc 内容为用户代码）
+- ❌ 不在 iframe 内注入任何脚本
 - ❌ 不把 generate.js 的逻辑搬到 Cloudflare Workers（本地脚本，不部署）
-- ❌ 原始 HTML 文件（demos/done/）不能暴露给搜索引擎（必须有 noindex）
+- ❌ uimaster.cc 不含 `/effects/*` 路由

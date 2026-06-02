@@ -8,6 +8,7 @@
 ## 规则文档索引	
 
 @.claude/rules/GLOBAL.md
+@.claude/rules/architecture-unified.md
 @.claude/rules/design-system.md
 @.claude/rules/data-model.md
 @.claude/rules/bm25-engine.md
@@ -46,13 +47,22 @@
 
 ---
 
-## 两条产品线约定
+## 站点定位
 
-**Design System Preview（`/preview/` `/compare/`）**
-- 纯静态，数据来自 `public/data/*.json`，无需后端
+**uimaster.cc 只是 Design System Preview 站点**，纯静态，无后端 API 依赖。
+
+- 数据来自 `public/data/*.json` + `public/demos/official/` + `public/meta/*.json`
 - BM25 在浏览器端运行，MASTER.md 在浏览器端生成下载
+- 封面图片托管在 R2，通过 meta.json 中的 cover_url 引用
 
-**HTML Effects Gallery（`/effects/`）**
-- 需要 Cloudflare D1（数据库）+ R2（文件存储）+ Workers（API）
-- 所有 `/api/effects/*` 和 `/api/share/*` 接口走 Cloudflare Workers
-- generate.js 脚本在本地运行，不部署到 Cloudflare
+## 两条产品线（数据层）
+
+**Design System Preview（uimaster.cc 渲染）**
+- 纯静态站点，数据均在本地
+- 封面由 generate.js --type=design 生成并上传 R2
+- 详见 @.claude/rules/architecture-unified.md
+
+**HTML Effects Gallery（仅数据流水线，uimaster.cc 不渲染）**
+- generate.js --type=effects 处理数据到 D1 + R2
+- 供其他独立消费者站点使用
+- 详见 @.claude/rules/architecture-unified.md

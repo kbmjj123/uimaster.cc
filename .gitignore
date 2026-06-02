@@ -51,3 +51,7 @@ pnpm-lock.yaml
 scripts/scraper/futurepedia.ts
 # Added by code-review-graph
 .code-review-graph/
+
+# generate.js 本地临时目录
+covers/
+og/
