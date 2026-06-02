@@ -226,6 +226,8 @@ export interface DemoMeta {
     body: string
   }
   tags: string[]
+  cover_url?: string
+  cover_static_url?: string
   contributor?: {
     name: string
     url: string

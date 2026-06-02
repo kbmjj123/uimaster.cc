@@ -60,12 +60,7 @@
       class="preview-demo"
     />
 
-    <!-- ── 3. Ad C (728×90) below preview ──────────────────────────────────── -->
-    <div class="preview-ad-row">
-      <AdSlot size="728x90" position="ad-mid-content" />
-    </div>
-
-    <!-- ── 5. Design System Parameters ───────────────────────────────────── -->
+    <!-- ── 3. Design System Parameters ───────────────────────────────────── -->
     <section class="preview-section" aria-labelledby="params-heading">
       <h2 id="params-heading" class="preview-h2">Design System Parameters</h2>
 
@@ -149,7 +144,7 @@
       </div>
     </section>
 
-    <!-- ── 6. How to Use (3 steps) ────────────────────────────────────────── -->
+    <!-- ── 4. How to Use (3 steps) ────────────────────────────────────────── -->
     <section class="preview-section" aria-labelledby="howto-heading">
       <h2 id="howto-heading" class="preview-h2">How to Use</h2>
       <ol class="preview-steps">
@@ -189,12 +184,7 @@
       </ol>
     </section>
 
-    <!-- ── 7. Ad D (728×90) above related ────────────────────────────────── -->
-    <div class="preview-ad-row">
-      <AdSlot size="728x90" position="ad-bottom" />
-    </div>
-
-    <!-- ── 8. Related Combinations ───────────────────────────────────────── -->
+    <!-- ── 5. Related Combinations ───────────────────────────────────────── -->
     <section class="preview-section" aria-labelledby="related-heading">
       <h2 id="related-heading" class="preview-h2">Related Combinations</h2>
 
@@ -246,7 +236,7 @@
       </div>
     </section>
 
-    <!-- ── 9. Contributor credit ──────────────────────────────────────────── -->
+    <!-- ── 6. Contributor credit ──────────────────────────────────────────── -->
     <!-- do-follow backlink per CONTRIBUTING.md, rel="noopener" only (no nofollow) -->
     <section
       v-if="contributor"
@@ -685,13 +675,6 @@ useHead({
   margin-bottom: 20px;
 }
 
-/* ── Ad rows ──────────────────────────────────────────────────────────────── */
-.preview-ad-row {
-  display: flex;
-  justify-content: center;
-  margin: 8px 0 24px;
-}
-
 /* ── Sections ─────────────────────────────────────────────────────────────── */
 .preview-section {
   margin-bottom: 48px;
@@ -1034,10 +1017,6 @@ useHead({
   .preview-related-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .preview-ad-row {
-    display: none; /* 728×90 hidden on mobile; AdSlot handles 320×50 in layout */
   }
 }
 </style>

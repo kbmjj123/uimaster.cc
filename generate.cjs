@@ -48,7 +48,11 @@ function detectChrome() {
     if (!fs.existsSync(root)) continue;
     const versions = fs.readdirSync(root).sort().reverse();
     for (const ver of versions) {
-      const bin = path.join(root, ver, 'chrome-linux64', 'chrome');
+      // Linux
+      let bin = path.join(root, ver, 'chrome-linux64', 'chrome');
+      if (fs.existsSync(bin)) return bin;
+      // macOS
+      bin = path.join(root, ver, 'chrome-mac-x64', 'Google Chrome for Testing.app', 'Contents', 'MacOS', 'Google Chrome for Testing');
       if (fs.existsSync(bin)) return bin;
     }
   }
@@ -74,6 +78,17 @@ const CONFIG = {
   doneDir: path.resolve(__dirname, 'demos/done'),
   coversDir: path.resolve(__dirname, 'covers'),
   ogDir: path.resolve(__dirname, 'og'),
+
+  // Design System 目录
+  designDemosDir: path.resolve(__dirname, 'public/demos/official'),
+  designMetaDir: path.resolve(__dirname, 'public/meta'),
+
+  // Design System 封面尺寸（桌面端 Full HD）
+  designCoverWidth: 1920,
+  designCoverHeight: 1080,
+  designRecordFrameCount: 20,   // 滚动录制帧数（落地页不需要太多帧）
+  designRecordInterval: 200,    // 帧间隔 ms
+  designRecordWaitMs: 3000,     // 页面加载等待时间
 
   // 封面录制参数
   coverWidth: 640,
@@ -113,7 +128,12 @@ function parseArgs() {
   const mode = {
     type: 'all',   // 'all' | 'new' | 'file'
     file: null,
+    pipeline: 'effects',  // 'effects' | 'design'
   };
+
+  if (args.includes('--type=design')) {
+    mode.pipeline = 'design';
+  }
 
   if (args.includes('--new')) {
     mode.type = 'new';
@@ -1134,7 +1154,209 @@ async function moveToProcessed(htmlPath) {
 }
 
 // ============================================================
-// 模块九：流水线串联 + 错误处理
+// 模块九：Design System 流水线（--type=design）
+// ============================================================
+
+/** 获取 public/demos/official/ 下所有 .html 文件 */
+function getDesignDemoFiles() {
+  const dir = CONFIG.designDemosDir;
+  if (!fs.existsSync(dir)) {
+    console.warn(`[WARN] design demos 目录不存在：${dir}`);
+    return [];
+  }
+  return fs.readdirSync(dir)
+    .filter(f => f.endsWith('.html'))
+    .map(f => path.join(dir, f));
+}
+
+/** 注入 <link rel="canonical"> 到 HTML 头部 */
+function injectCanonical(html, slug) {
+  const canonicalUrl = `https://uimaster.cc/preview/${slug}`;
+  const tag = `<link rel="canonical" href="${canonicalUrl}">`;
+
+  // 移除已有的 canonical
+  let result = html.replace(/<link\s[^>]*rel=["']canonical["'][^>]*\/?>/gi, '');
+
+  if (result.includes('</head>')) {
+    result = result.replace('</head>', `    ${tag}\n</head>`);
+  } else {
+    result += `\n${tag}\n`;
+  }
+  return result;
+}
+
+/** 更新 public/meta/{slug}.json 中的 cover_url + cover_static_url */
+function updateMetaJson(slug, coverUrl, coverStaticUrl) {
+  const metaPath = path.join(CONFIG.designMetaDir, `${slug}.json`);
+  if (!fs.existsSync(metaPath)) {
+    console.warn(`  [meta] ⚠ meta.json 不存在，已跳过：${metaPath}`);
+    return;
+  }
+
+  const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+  meta.cover_url = coverUrl;
+  if (coverStaticUrl) meta.cover_static_url = coverStaticUrl;
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + '\n', 'utf8');
+  console.log(`  [meta] ✓ cover_url + cover_static_url 已写入 ${slug}.json`);
+}
+
+/**
+ * 单文件 Design System 流水线
+ * 截图 → 注入 canonical → 上传 R2 → 更新 meta.json
+ */
+async function processDesignHtml(htmlPath) {
+  const id = fileToId(htmlPath);
+  const startTime = Date.now();
+
+  console.log(`\n${'='.repeat(60)}`);
+  console.log(`[START] [design] ${path.basename(htmlPath)}  (id: ${id})`);
+  console.log(`        ${now()}`);
+  console.log(`${'='.repeat(60)}`);
+
+  try {
+    // ── 1/5 录制动图帧（滚动录制） ────────────────────
+    const { frames } = await runStep('1/5 录制帧', async () => {
+      const browser = await launchBrowser();
+      try {
+        const page = await browser.newPage();
+        await page.setViewport({
+          width: CONFIG.designCoverWidth || 1920,
+          height: CONFIG.designCoverHeight || 1080,
+          deviceScaleFactor: 1,
+        });
+        const fileUrl = `file://${htmlPath}`;
+        console.log(`  [record] 加载：${fileUrl}`);
+        await page.goto(fileUrl, { waitUntil: 'networkidle0', timeout: 30000 });
+
+        // landing page 需要更长时间加载字体和图片
+        console.log(`  [record] 等待 ${CONFIG.designRecordWaitMs}ms 加载完成...`);
+        await sleep(CONFIG.designRecordWaitMs);
+
+        // 获取页面完整高度
+        const pageHeight = await page.evaluate(() => document.documentElement.scrollHeight);
+        const viewportHeight = CONFIG.designCoverHeight || 1080;
+        const maxScroll = Math.max(0, pageHeight - viewportHeight);
+        const frameCount = CONFIG.designRecordFrameCount || 20;
+        const interval = CONFIG.designRecordInterval || 200;
+
+        console.log(`  [record] 页面高度 ${pageHeight}px，可滚动 ${maxScroll}px`);
+        console.log(`  [record] 录制 ${frameCount} 帧，从顶滚动到底`);
+
+        // 先截首帧（顶部）
+        await page.evaluate(() => window.scrollTo(0, 0));
+        await sleep(300);
+        const frames = [];
+        frames.push(await page.screenshot({ type: 'png' }));
+
+        // 逐帧滚动
+        for (let i = 1; i < frameCount; i++) {
+          const scrollPos = Math.round((maxScroll * i) / (frameCount - 1));
+          await page.evaluate((y) => window.scrollTo(0, y), scrollPos);
+          await sleep(interval);
+          frames.push(await page.screenshot({ type: 'png' }));
+        }
+
+        await page.close();
+        console.log(`  [record] ✓ 录制完成，共 ${frames.length} 帧（顶部→底部）`);
+        return { frames };
+      } finally {
+        await browser.close();
+      }
+    });
+
+    // ── 2/5 合成动图 WebP + 提取静图 ──────────────────
+    const coverPaths = await runStep('2/5 合成封面', async () => {
+      const animPath = path.join(CONFIG.coversDir, `${id}.webp`);
+      const staticPath = path.join(CONFIG.coversDir, `${id}-static.webp`);
+
+      // 动图
+      const actualAnim = await framesToAnimatedWebP(frames, animPath);
+
+      // 静图（第一帧）
+      const firstBuffer = frames[0];
+      let ffmpegOk = false;
+      try { execSync('ffmpeg -version', { stdio: 'pipe' }); ffmpegOk = true; } catch (_) {}
+      if (ffmpegOk) {
+        const tmpPng = path.join(os.tmpdir(), `heg-ds-static-${id}-${Date.now()}.png`);
+        fs.writeFileSync(tmpPng, firstBuffer);
+        try {
+          await new Promise((resolve, reject) => {
+            const proc = spawn('ffmpeg', [
+              '-y', '-i', tmpPng, '-quality', '85', staticPath,
+            ], { stdio: ['ignore', 'pipe', 'pipe'] });
+            proc.on('close', code => code === 0 ? resolve() : reject(new Error(`ffmpeg exit ${code}`)));
+          });
+        } finally {
+          try { fs.unlinkSync(tmpPng); } catch (_) {}
+        }
+      } else {
+        const fallback = staticPath.replace(/\.webp$/, '.png');
+        fs.writeFileSync(fallback, firstBuffer);
+      }
+
+      const animSize = (fs.statSync(actualAnim).size / 1024).toFixed(1);
+      const staticSize = (fs.statSync(staticPath).size / 1024).toFixed(1);
+      console.log(`  [cover] ✓ 动图：${path.basename(actualAnim)} (${animSize} KB)`);
+      console.log(`  [cover] ✓ 静图：${path.basename(staticPath)} (${staticSize} KB)`);
+      return { animPath: actualAnim, staticPath };
+    });
+
+    // ── 3/5 注入 canonical ────────────────────────────────
+    await runStep('3/5 注入 canonical', async () => {
+      let html = fs.readFileSync(htmlPath, 'utf8');
+      html = injectCanonical(html, id);
+      fs.writeFileSync(htmlPath, html, 'utf8');
+    });
+
+    // ── 4/5 上传 R2 ────────────────────────────────────
+    await runStep('4/5 上传 R2', async () => {
+      const hasCreds = CONFIG.r2AccountId && CONFIG.r2AccessKeyId && CONFIG.r2SecretAccessKey;
+      if (!hasCreds) {
+        console.log('  [r2] ⚠ R2 未配置，跳过上传');
+        return;
+      }
+
+      const { PutObjectCommand } = require('@aws-sdk/client-s3');
+      const client = getR2Client();
+      const bucket = CONFIG.r2BucketName;
+
+      const files = [
+        { local: coverPaths.animPath, key: `covers/${id}.webp`, type: 'image/webp' },
+        { local: coverPaths.staticPath, key: `covers/${id}-static.webp`, type: 'image/webp' },
+      ];
+
+      for (const f of files) {
+        const buf = fs.readFileSync(f.local);
+        await client.send(new PutObjectCommand({
+          Bucket: bucket, Key: f.key, Body: buf, ContentType: f.type,
+        }));
+        console.log(`  [r2] ✓ ${f.key}`);
+      }
+    });
+
+    // ── 5/5 更新 meta.json ────────────────────────────
+    await runStep('5/5 更新 meta', async () => {
+      const baseUrl = CONFIG.r2PublicBase || 'https://cdn.uimaster.cc';
+      const coverUrl = `${baseUrl}/covers/${id}.webp`;
+      const coverStaticUrl = `${baseUrl}/covers/${id}-static.webp`;
+      updateMetaJson(id, coverUrl, coverStaticUrl);
+    });
+
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+    console.log(`\n✅ [DONE] [design] ${id}  总耗时 ${elapsed}s`);
+    return { id, success: true, elapsed: Number(elapsed) };
+
+  } catch (err) {
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+    console.error(`\n❌ [FAIL] [design] ${id}  耗时 ${elapsed}s`);
+    console.error(`   错误：${err.message}`);
+    if (process.env.DEBUG) console.error(err.stack);
+    return { id, success: false, error: err.message, elapsed: Number(elapsed) };
+  }
+}
+
+// ============================================================
+// 模块十：流水线串联 + 错误处理（Effects）
 // ============================================================
 
 /**
@@ -1246,6 +1468,60 @@ async function processHtml(htmlPath) {
 // ============================================================
 async function main() {
   const mainStart = Date.now();
+
+  // ── 解析运行模式 ──────────────────────────────────────────
+  const mode = parseArgs();
+
+  // ── Design System 模式 ────────────────────────────────────
+  if (mode.pipeline === 'design') {
+    console.log('\n🎨 Design System 封面流水线');
+    console.log(`   时间：${now()}`);
+    console.log(`   Chrome：${CHROME_EXECUTABLE}`);
+
+    ensureDirs();
+
+    let files = getDesignDemoFiles();
+
+    if (files.length === 0) {
+      console.log('[INFO] public/demos/official/ 下没有 .html 文件');
+      return;
+    }
+
+    if (mode.type === 'file') {
+      const target = path.isAbsolute(mode.file)
+        ? mode.file
+        : path.join(CONFIG.designDemosDir, mode.file);
+      if (!fs.existsSync(target)) {
+        console.error(`[ERROR] 文件不存在：${target}`);
+        process.exit(1);
+      }
+      files = [target];
+    }
+
+    console.log(`[QUEUE] 待处理 ${files.length} 个文件：`);
+    files.forEach((f, i) => console.log(`        ${i + 1}. ${path.basename(f)}`));
+
+    const results = [];
+    for (let i = 0; i < files.length; i++) {
+      console.log(`\n[PROGRESS] ${i + 1}/${files.length}`);
+      results.push(await processDesignHtml(files[i]));
+    }
+
+    const succeeded = results.filter(r => r.success);
+    const failedArr = results.filter(r => !r.success);
+    const totalSec = ((Date.now() - mainStart) / 1000).toFixed(1);
+
+    console.log(`\n${'='.repeat(60)}`);
+    console.log('📊 汇总报告');
+    console.log('='.repeat(60));
+    console.log(`   总计：${results.length} 个  ✅ ${succeeded.length} 成功  ❌ ${failedArr.length} 失败`);
+    console.log(`   总耗时：${totalSec}s`);
+
+    if (failedArr.length > 0) process.exit(1);
+    return;
+  }
+
+  // ── Effects Gallery 模式（原有逻辑）────────────────────────
   console.log('\n🚀 HTML Effects Gallery — 自动化流水线');
   console.log(`   版本：v1.0  时间：${now()}`);
   console.log(`   Chrome：${CHROME_EXECUTABLE}`);
@@ -1253,8 +1529,6 @@ async function main() {
   // 确保所有目录存在
   ensureDirs();
 
-  // 解析运行模式
-  const mode = parseArgs();
   console.log(`   模式：${mode.type}${mode.file ? ' → ' + mode.file : ''}\n`);
 
   // ── 获取待处理文件列表 ──────────────────────────────────

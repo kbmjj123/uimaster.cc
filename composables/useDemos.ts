@@ -98,7 +98,27 @@ export function useDemos() {
     return `/compare/${s1}-vs-${s2}`
   }
 
-  return { resolveDemoInfo, previewUrl, compareUrl, generateSlug }
+  /**
+   * Load all available demos (reads from /api/metas).
+   */
+  async function loadAllMetas(): Promise<DemoMeta[]> {
+    try {
+      if (import.meta.server) {
+        const { readdirSync, readFileSync } = await import('node:fs')
+        const { resolve } = await import('node:path')
+        const metaDir = resolve(process.cwd(), 'public/meta')
+        const files = readdirSync(metaDir).filter(f => f.endsWith('.json'))
+        return files.map(f =>
+          JSON.parse(readFileSync(resolve(metaDir, f), 'utf-8'))
+        )
+      }
+      return await $fetch<DemoMeta[]>('/api/metas.json')
+    } catch {
+      return []
+    }
+  }
+
+  return { resolveDemoInfo, previewUrl, compareUrl, generateSlug, loadAllMetas }
 }
 
 // ─── Style list loader ────────────────────────────────────────────────────────

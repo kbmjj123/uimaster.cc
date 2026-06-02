@@ -17,14 +17,6 @@
           <span class="navbar-link-icon">⬡</span>
           Design System
         </NuxtLink>
-        <NuxtLink
-          to="/effects"
-          class="navbar-link"
-          :class="{ 'navbar-link--active': isEffectsRoute }"
-        >
-          <span class="navbar-link-icon">⚡</span>
-          Effects Gallery
-        </NuxtLink>
       </nav>
 
       <!-- Right Actions -->
@@ -71,15 +63,6 @@
         <span class="navbar-link-icon">⬡</span>
         Design System
       </NuxtLink>
-      <NuxtLink
-        to="/effects"
-        class="navbar-mobile-link"
-        :class="{ 'navbar-mobile-link--active': isEffectsRoute }"
-        @click="mobileMenuOpen = false"
-      >
-        <span class="navbar-link-icon">⚡</span>
-        Effects Gallery
-      </NuxtLink>
       <a
         href="https://github.com/uimaster-cc/uimaster"
         target="_blank"
@@ -102,10 +85,8 @@ const mobileMenuOpen = ref(false)
 const isPreviewRoute = computed(() =>
   ['/', '/preview', '/compare', '/styles', '/products', '/how-to-use'].some(p =>
     route.path === p || route.path.startsWith(p + '/')
-  ) && !route.path.startsWith('/effects')
+  )
 )
-
-const isEffectsRoute = computed(() => route.path.startsWith('/effects'))
 
 function toggleMobileMenu() {
   mobileMenuOpen.value = !mobileMenuOpen.value

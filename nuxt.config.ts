@@ -146,46 +146,7 @@ export default defineNuxtConfig({
         // 静态构建时可能无法请求，忽略
       }
 
-      // ── B 线：HTML Effects Gallery ────────────────────────────────────────
-      try {
-        const { $fetch } = await import('ofetch')
 
-        // effects/[id]
-        const effects: Array<{ id: string; is_featured: number; updated_at: string }> =
-          await $fetch('/api/effects?limit=10000&_sitemap=1').catch(() => [])
-
-        effects.forEach((e) => {
-          urls.push({
-            loc: `/effects/${e.id}`,
-            priority: e.is_featured ? 1.0 : 0.8,
-            changefreq: 'weekly',
-            lastmod: e.updated_at?.split('T')[0],
-          })
-        })
-
-        // effects/category/[category]
-        const categories: string[] = await $fetch('/api/_sitemap/effect-categories').catch(
-          () => [],
-        )
-        categories.forEach((cat) => {
-          urls.push({
-            loc: `/effects/category/${cat}`,
-            priority: 0.7,
-            changefreq: 'daily',
-          })
-        })
-
-        // effects/scene/[scene]
-        const scenes: string[] = await $fetch('/api/_sitemap/effect-scenes').catch(() => [])
-        scenes.forEach((scene) => {
-          urls.push({ loc: `/effects/scene/${scene}`, priority: 0.7, changefreq: 'daily' })
-        })
-
-        // effects/ 首页
-        urls.push({ loc: '/effects', priority: 0.9, changefreq: 'daily' })
-      } catch {
-        // D1 未就绪时忽略
-      }
 
       return urls
     },
@@ -229,5 +190,8 @@ export default defineNuxtConfig({
   // ─── Nitro（Cloudflare Pages 部署）──────────────────────────────────────
   nitro: {
     preset: 'cloudflare-pages',
+    prerender: {
+      routes: ['/api/metas.json'],
+    },
   },
 })

@@ -8,11 +8,6 @@
       <slot />
     </main>
 
-    <!-- Mobile Ad Strip (fixed bottom) -->
-    <div class="layout-mobile-ad">
-      <AdSlot size="320x50" position="mobile" />
-    </div>
-
     <!-- Footer -->
     <footer class="layout-footer">
       <div class="layout-footer-inner">
@@ -29,12 +24,6 @@
             <NuxtLink to="/" class="layout-footer-link">Preview</NuxtLink>
             <NuxtLink to="/compare" class="layout-footer-link">Compare</NuxtLink>
             <NuxtLink to="/how-to-use" class="layout-footer-link">How to Use</NuxtLink>
-          </div>
-          <div class="layout-footer-nav-group">
-            <span class="layout-footer-nav-label">Effects Gallery</span>
-            <NuxtLink to="/effects" class="layout-footer-link">Browse Effects</NuxtLink>
-            <NuxtLink to="/effects/category/canvas" class="layout-footer-link">Canvas</NuxtLink>
-            <NuxtLink to="/effects/category/css" class="layout-footer-link">CSS Animation</NuxtLink>
           </div>
           <div class="layout-footer-nav-group">
             <span class="layout-footer-nav-label">Community</span>
@@ -91,41 +80,11 @@ const currentYear = new Date().getFullYear()
   width: 100%;
 }
 
-/* Mobile fixed ad strip */
-.layout-mobile-ad {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  z-index: 40;
-  pointer-events: none;
-}
-
-.layout-mobile-ad > * {
-  pointer-events: auto;
-}
-
-@media (min-width: 768px) {
-  .layout-mobile-ad {
-    display: none;
-  }
-}
-
 /* Footer */
 .layout-footer {
   background-color: var(--color-surface, #fff);
   border-top: 1px solid var(--color-border, #E5E7EB);
   margin-top: auto;
-  /* Account for mobile ad strip */
-  padding-bottom: 60px;
-}
-
-@media (min-width: 768px) {
-  .layout-footer {
-    padding-bottom: 0;
-  }
 }
 
 .layout-footer-inner {

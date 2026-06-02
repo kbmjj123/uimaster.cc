@@ -27,7 +27,7 @@
           <ProductSelector v-model="selectedProduct" />
         </div>
 
-        <!-- Download button (T04 will replace this stub) -->
+        <!-- Download button -->
         <div class="home-sidebar-section home-sidebar-download">
           <button
             class="home-download-btn"
@@ -45,11 +45,6 @@
             Compatible with Claude Code · Cursor · Windsurf
           </p>
         </div>
-
-        <!-- Ad B: 160×600 sidebar (hidden on mobile per ads.md) -->
-        <div class="home-sidebar-ad">
-          <AdSlot size="160x600" position="ad-sidebar" />
-        </div>
       </aside>
 
       <!-- ── Right: preview area ── -->
@@ -62,21 +57,24 @@
           @mode-change="onModeChange"
         />
 
-        <!-- Ad A: 728×90 below preview (hidden on mobile) -->
-        <div class="home-ad-below-preview">
-          <AdSlot size="728x90" position="ad-below-preview" />
-        </div>
-
-        <!-- Mobile ad: 320×50 (shown only on mobile, fixed position handled in layout) -->
-        <!-- The default.vue layout already renders the mobile strip; no duplicate here -->
       </main>
     </div>
+
+    <!-- ── Layer 2: Demo card grid ──────────────────────────────────────────── -->
+    <hr class="home-divider" />
+
+    <DemoCardGrid
+      title="All Demos"
+      description="Browse all available Design System previews. Hover for animated cover."
+      :metas="allMetas"
+      :loading="metasLoading"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { useDemos, loadStyles, loadProducts } from '~/composables/useDemos'
-import type { RawStyle, RawProduct } from '~/types/design-system'
+import type { RawStyle, RawProduct, DemoMeta } from '~/types/design-system'
 
 // ── Page meta ────────────────────────────────────────────────────────────────
 useHead({
@@ -100,6 +98,8 @@ const selectedProduct = ref<string | null>(null)
 const demoUrl         = ref<string | null>(null)
 const demoSource      = ref<'official' | 'community' | null>(null)
 const downloadState   = ref<'idle' | 'loading' | 'done'>('idle')
+const allMetas        = ref<DemoMeta[]>([])
+const metasLoading    = ref(true)
 
 // Human-readable names for the toolbar
 const styleNames   = ref<Record<string, string>>({})
@@ -141,6 +141,11 @@ onMounted(async () => {
   // Default selection when no query params — first demo (Aurora UI × Analytics Dashboard)
   if (!selectedStyle.value)   selectedStyle.value   = 'aurora-ui'
   if (!selectedProduct.value) selectedProduct.value = 'analytics-dashboard'
+
+  // Load all metas for Layer 2 card grid
+  const { loadAllMetas } = useDemos()
+  allMetas.value = await loadAllMetas()
+  metasLoading.value = false
 })
 
 // ── Resolve demo URL when selection changes ───────────────────────────────────
@@ -308,11 +313,6 @@ function onModeChange(_mode: string) {
   line-height: 1.4;
 }
 
-/* Sidebar ad */
-.home-sidebar-ad {
-  /* 160x600 — hidden on mobile via AdSlot component */
-}
-
 /* ── Preview area ──────────────────────────────────────────────────────────── */
 .home-preview-area {
   flex: 1;
@@ -320,12 +320,6 @@ function onModeChange(_mode: string) {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-/* Ad below preview — hidden on mobile per ads.md */
-.home-ad-below-preview {
-  display: flex;
-  justify-content: center;
 }
 
 /* ── Mobile layout ─────────────────────────────────────────────────────────── */
@@ -347,21 +341,18 @@ function onModeChange(_mode: string) {
     width: 100%;
     position: static;
   }
-
-  /* On mobile, sidebar ad (160x600) is hidden by AdSlot component automatically */
-  .home-sidebar-ad {
-    display: none;
-  }
-
-  /* Below-preview 728x90 is hidden on mobile by AdSlot component */
-  .home-ad-below-preview {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .home-sidebar {
     width: 220px;
   }
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────────── */
+.home-divider {
+  border: none;
+  border-top: 1px solid var(--color-border, #E5E7EB);
+  margin: 8px 0 0;
 }
 </style>
