@@ -60,17 +60,34 @@ interface DataCache {
 async function loadData(): Promise<DataCache> {
   if (_cache) return _cache
 
-  const [styles, products, colors, typography, landing, reasoning] = await Promise.all([
-    $fetch<RawStyle[]>('/data/styles.json'),
-    $fetch<RawProduct[]>('/data/products.json'),
-    $fetch<RawColorPalette[]>('/data/colors.json'),
-    $fetch<RawTypography[]>('/data/typography.json'),
-    $fetch<RawLanding[]>('/data/landing.json'),
-    // ui-reasoning.json is optional — gracefully fallback to empty array
-    $fetch<RawUiReasoning[]>('/data/ui-reasoning.json').catch(() => []),
-  ])
+  if (import.meta.server) {
+    // SSR: read files directly (Vite/Nitro mismatch prevents $fetch of public/ assets in dev)
+    const { readFileSync } = await import('node:fs')
+    const { resolve } = await import('node:path')
+    const root = resolve(process.cwd())
+    const dataDir = `${root}/public/data`
+    const read = <T>(file: string): T =>
+      JSON.parse(readFileSync(`${dataDir}/${file}`, 'utf-8'))
+    _cache = {
+      styles:      read<RawStyle[]>('styles.json'),
+      products:    read<RawProduct[]>('products.json'),
+      colors:      read<RawColorPalette[]>('colors.json'),
+      typography:  read<RawTypography[]>('typography.json'),
+      landing:     read<RawLanding[]>('landing.json'),
+      reasoning:   read<RawUiReasoning[]>('ui-reasoning.json'),
+    }
+  } else {
+    const [styles, products, colors, typography, landing, reasoning] = await Promise.all([
+      $fetch<RawStyle[]>('/data/styles.json'),
+      $fetch<RawProduct[]>('/data/products.json'),
+      $fetch<RawColorPalette[]>('/data/colors.json'),
+      $fetch<RawTypography[]>('/data/typography.json'),
+      $fetch<RawLanding[]>('/data/landing.json'),
+      $fetch<RawUiReasoning[]>('/data/ui-reasoning.json').catch(() => []),
+    ])
+    _cache = { styles, products, colors, typography, landing, reasoning }
+  }
 
-  _cache = { styles, products, colors, typography, landing, reasoning }
   return _cache
 }
 

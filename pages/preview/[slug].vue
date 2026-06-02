@@ -65,12 +65,29 @@
       />
     </div>
 
-    <!-- ── 3. Ad C (728×90) below iframe ──────────────────────────────────── -->
+    <!-- ── 3. Demo Source Code (collapsible, SEO-friendly) ──────────── -->
+    <details v-if="sourceCode" class="preview-source">
+      <summary class="preview-source-summary">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="7 13 11 9 7 5"/>
+        </svg>
+        View Demo Source Code
+      </summary>
+      <div class="preview-source-body">
+        <pre class="preview-source-pre"><code class="hljs" v-html="highlightedCode" /></pre>
+        <button class="preview-source-copy" @click="copySource">
+          {{ sourceCopied ? 'Copied!' : 'Copy' }}
+        </button>
+      </div>
+    </details>
+
+    <!-- ── 4. Ad C (728×90) below iframe ──────────────────────────────────── -->
     <div class="preview-ad-row">
       <AdSlot size="728x90" position="ad-mid-content" />
     </div>
 
-    <!-- ── 4. Design System Parameters ───────────────────────────────────── -->
+    <!-- ── 5. Design System Parameters ───────────────────────────────────── -->
     <section class="preview-section" aria-labelledby="params-heading">
       <h2 id="params-heading" class="preview-h2">Design System Parameters</h2>
 
@@ -154,7 +171,7 @@
       </div>
     </section>
 
-    <!-- ── 5. How to Use (3 steps) ────────────────────────────────────────── -->
+    <!-- ── 6. How to Use (3 steps) ────────────────────────────────────────── -->
     <section class="preview-section" aria-labelledby="howto-heading">
       <h2 id="howto-heading" class="preview-h2">How to Use</h2>
       <ol class="preview-steps">
@@ -194,12 +211,12 @@
       </ol>
     </section>
 
-    <!-- ── 6. Ad D (728×90) above related ────────────────────────────────── -->
+    <!-- ── 7. Ad D (728×90) above related ────────────────────────────────── -->
     <div class="preview-ad-row">
       <AdSlot size="728x90" position="ad-bottom" />
     </div>
 
-    <!-- ── 7. Related Combinations ───────────────────────────────────────── -->
+    <!-- ── 8. Related Combinations ───────────────────────────────────────── -->
     <section class="preview-section" aria-labelledby="related-heading">
       <h2 id="related-heading" class="preview-h2">Related Combinations</h2>
 
@@ -251,7 +268,7 @@
       </div>
     </section>
 
-    <!-- ── 8. Contributor credit ──────────────────────────────────────────── -->
+    <!-- ── 9. Contributor credit ──────────────────────────────────────────── -->
     <!-- do-follow backlink per CONTRIBUTING.md, rel="noopener" only (no nofollow) -->
     <section
       v-if="contributor"
@@ -286,6 +303,12 @@ import { useDemos, loadStyles, loadProducts, generateSlug } from '~/composables/
 import { useDesignSystem } from '~/composables/useDesignSystem'
 import type { DesignSystem, DemoMeta, RawStyle, RawProduct } from '~/types/design-system'
 
+// highlight.js: only load XML/HTML language to keep bundle small
+import hljs from 'highlight.js/lib/core'
+import xml from 'highlight.js/lib/languages/xml'
+import 'highlight.js/styles/github.css'
+hljs.registerLanguage('xml', xml)
+
 // ── Route params ──────────────────────────────────────────────────────────────
 const route  = useRoute()
 const slug   = computed(() => route.params.slug as string)
@@ -296,15 +319,16 @@ const slug   = computed(() => route.params.slug as string)
 
 interface RelatedItem { slug: string; style: string; product: string }
 
-const styleName   = ref('')
-const productName = ref('')
-const styleSlug   = ref('')
-const meta        = ref<DemoMeta | null>(null)
-const demoUrl     = ref<string | null>(null)
-const designSystem = ref<DesignSystem | null>(null)
-const styleInfo   = ref<RawStyle | null>(null)
-const relatedByStyle   = ref<RelatedItem[]>([])
-const relatedByProduct = ref<RelatedItem[]>([])
+const styleName    = ref('')
+const productName  = ref('')
+const styleSlug    = ref('')
+const meta         = ref<DemoMeta | null>(null)
+const demoUrl      = ref<string | null>(null)
+const designSystem  = ref<DesignSystem | null>(null)
+const styleInfo    = ref<RawStyle | null>(null)
+const relatedByStyle    = ref<RelatedItem[]>([])
+const relatedByProduct  = ref<RelatedItem[]>([])
+const sourceCode   = ref('')
 
 const { resolveDemoInfo } = useDemos()
 const { generateDesignSystem } = useDesignSystem()
@@ -384,6 +408,20 @@ const { data: pageData } = await useAsyncData(`preview-${slug.value}`, async () 
     }
   }
 
+  // Load demo source code (SSR: read directly; client: use $fetch fallback)
+  let sourceCode = ''
+  if (info.url) {
+    if (import.meta.server) {
+      try {
+        const { readFileSync } = await import('node:fs')
+        const { resolve } = await import('node:path')
+        sourceCode = readFileSync(`${resolve(process.cwd())}/public${info.url}`, 'utf-8')
+      } catch {
+        sourceCode = ''
+      }
+    }
+  }
+
   // Generate design system
   const query = `${sName} ${pName}`
   const ds = query.trim().length > 2
@@ -400,6 +438,7 @@ const { data: pageData } = await useAsyncData(`preview-${slug.value}`, async () 
     relatedByStyle: byStyle,
     relatedByProduct: byProduct,
     designSystem: ds,
+    sourceCode,
   }
 })
 
@@ -414,7 +453,18 @@ if (pageData.value) {
   relatedByStyle.value   = pageData.value.relatedByStyle
   relatedByProduct.value = pageData.value.relatedByProduct
   designSystem.value     = pageData.value.designSystem
+  sourceCode.value       = pageData.value.sourceCode ?? ''
 }
+
+// Client-side fallback: fetch source on navigation (SSR already loaded it)
+watch(demoUrl, async (url) => {
+  if (!url || sourceCode.value) return
+  try {
+    sourceCode.value = await $fetch<string>(url)
+  } catch {
+    sourceCode.value = ''
+  }
+}, { immediate: true })
 
 // ── Derived values ────────────────────────────────────────────────────────────
 
@@ -448,6 +498,12 @@ const compareLinks = computed(() =>
   }))
 )
 
+// Syntax-highlighted source code
+const highlightedCode = computed(() => {
+  if (!sourceCode.value) return ''
+  return hljs.highlight(sourceCode.value, { language: 'xml' }).value
+})
+
 // ── Share / copy link ─────────────────────────────────────────────────────────
 const shareCopied = ref(false)
 
@@ -466,6 +522,18 @@ async function copyLink() {
     document.body.removeChild(input)
     shareCopied.value = true
     setTimeout(() => { shareCopied.value = false }, 2000)
+  }
+}
+
+const sourceCopied = ref(false)
+
+async function copySource() {
+  try {
+    await navigator.clipboard.writeText(sourceCode.value)
+    sourceCopied.value = true
+    setTimeout(() => { sourceCopied.value = false }, 2000)
+  } catch {
+    // noop
   }
 }
 
@@ -1013,6 +1081,91 @@ useHead({
 
 .preview-contributor-github:hover {
   text-decoration: underline;
+}
+
+/* ── Demo Source Code ──────────────────────────────────────────────────────── */
+.preview-source {
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border, #E5E7EB);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--color-surface, #fff);
+}
+
+.preview-source-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text, #111827);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.preview-source-summary::-webkit-details-marker {
+  display: none;
+}
+
+.preview-source-summary svg {
+  transition: transform 150ms ease;
+  color: var(--color-text-muted, #6B7280);
+}
+
+details[open] .preview-source-summary svg {
+  transform: rotate(90deg);
+}
+
+.preview-source-summary:hover {
+  background: var(--color-bg, #F8F9FA);
+}
+
+.preview-source-body {
+  position: relative;
+  border-top: 1px solid var(--color-border, #E5E7EB);
+}
+
+.preview-source-pre {
+  margin: 0;
+  padding: 16px;
+  max-height: 480px;
+  overflow: auto;
+  background: #F8F9FA;
+  font-size: 12px;
+  line-height: 1.5;
+  tab-size: 2;
+}
+
+.preview-source-pre code {
+  font-family: var(--font-mono, 'SF Mono', 'Fira Code', monospace);
+}
+
+.preview-source-copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid var(--color-border, #E5E7EB);
+  border-radius: 6px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text-muted, #6B7280);
+  cursor: pointer;
+  font-family: inherit;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.preview-source-body:hover .preview-source-copy {
+  opacity: 1;
+}
+
+.preview-source-copy:hover {
+  color: var(--color-text, #111827);
+  border-color: var(--color-text-muted, #6B7280);
 }
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */

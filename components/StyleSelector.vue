@@ -134,11 +134,15 @@ function onImgError(e: Event) {
   border-radius: 9999px;
 }
 
-/* 2-column grid */
+/* 2-column grid with scroll */
 .style-selector-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6px;
+  max-height: 360px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 }
 
 /* Card */
@@ -153,6 +157,7 @@ function onImgError(e: Event) {
   border-radius: 8px;
   cursor: pointer;
   text-align: left;
+  min-width: 0;
   transition:
     border-color 150ms ease,
     background-color 150ms ease,

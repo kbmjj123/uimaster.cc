@@ -1,0 +1,19 @@
+{
+    "slug": "aurora-ui-analytics-dashboard",
+    "style": "Aurora UI",
+    "product": "Analytics Dashboard",
+    "source": "official",
+    "colors": {
+      "primary": "#1E40AF",
+      "accent": "#D97706",
+      "background": "#F8FAFC",
+      "foreground": "#1E3A8A",
+      "muted": "#E9EEF6",
+      "border": "#DBEAFE"
+    },
+    "fonts": {
+      "heading": "Fira Code",
+      "body": "Fira Sans"
+    },
+    "tags": ["dashboard", "analytics", "data", "gradient", "aurora"]
+  }

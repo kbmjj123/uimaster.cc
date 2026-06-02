@@ -137,6 +137,10 @@ onMounted(async () => {
   const qProduct = route.query.product as string | undefined
   if (qStyle)   selectedStyle.value   = qStyle
   if (qProduct) selectedProduct.value = qProduct
+
+  // Default selection when no query params — first demo (Aurora UI × Analytics Dashboard)
+  if (!selectedStyle.value)   selectedStyle.value   = 'aurora-ui'
+  if (!selectedProduct.value) selectedProduct.value = 'analytics-dashboard'
 })
 
 // ── Resolve demo URL when selection changes ───────────────────────────────────

@@ -36,6 +36,15 @@ async function fetchMeta(slug: string): Promise<DemoMeta | null> {
   if (metaCache.has(slug)) return metaCache.get(slug)!
 
   try {
+    if (import.meta.server) {
+      const { readFileSync } = await import('node:fs')
+      const { resolve } = await import('node:path')
+      const meta = JSON.parse(
+        readFileSync(`${resolve(process.cwd())}/public/meta/${slug}.json`, 'utf-8')
+      )
+      metaCache.set(slug, meta)
+      return meta
+    }
     const meta = await $fetch<DemoMeta>(`/meta/${slug}.json`)
     metaCache.set(slug, meta)
     return meta
@@ -99,12 +108,31 @@ let _products: RawProduct[] | null = null
 
 export async function loadStyles(): Promise<RawStyle[]> {
   if (_styles) return _styles
-  _styles = await $fetch<RawStyle[]>('/data/styles.json')
+
+  if (import.meta.server) {
+    // SSR: read file directly (Vite/Nitro mismatch prevents $fetch of public/ assets in dev)
+    const { readFileSync } = await import('node:fs')
+    const { resolve } = await import('node:path')
+    const root = resolve(process.cwd())
+    _styles = JSON.parse(readFileSync(`${root}/public/data/styles.json`, 'utf-8'))
+  } else {
+    _styles = await $fetch<RawStyle[]>('/data/styles.json')
+  }
+
   return _styles
 }
 
 export async function loadProducts(): Promise<RawProduct[]> {
   if (_products) return _products
-  _products = await $fetch<RawProduct[]>('/data/products.json')
+
+  if (import.meta.server) {
+    const { readFileSync } = await import('node:fs')
+    const { resolve } = await import('node:path')
+    const root = resolve(process.cwd())
+    _products = JSON.parse(readFileSync(`${root}/public/data/products.json`, 'utf-8'))
+  } else {
+    _products = await $fetch<RawProduct[]>('/data/products.json')
+  }
+
   return _products
 }

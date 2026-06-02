@@ -42,6 +42,12 @@ uimaster.cc 解决这个痛点：用户选择产品类型 + UI 风格，即可�
 - 支持桌面 / 移动端预览切换
 - 每个组合独立 URL：`/preview/[style]-[product]`
 
+**Demo 源码展示**
+- 预览页 iframe 下方提供可折叠源码面板
+- `$fetch` 加载 `/demos/official|community/[slug].html`，只读展示
+- highlight.js 语法高亮，SEO 爬虫可抓取完整 HTML 源码
+- 源码内含风格相关 class 名、CSS 变量、关键词，提升页面正文密度
+
 **MASTER.md 下载**
 - 前端 JS 版 BM25（对齐官方 core.py，k1=1.5，b=0.75）匹配设计系统参数
 - 生成包含完整 CSS 实现的 MASTER.md
