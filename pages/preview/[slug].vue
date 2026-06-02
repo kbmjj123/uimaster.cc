@@ -50,39 +50,17 @@
       </div>
     </div>
 
-    <!-- ── 2. iframe preview (full-width, 600px) ──────────────────────────── -->
-    <div class="preview-iframe-wrap">
-      <div v-if="!demoUrl" class="preview-iframe-placeholder">
-        <p class="preview-iframe-placeholder-text">Demo not available yet</p>
-      </div>
-      <iframe
-        v-else
-        :src="demoUrl"
-        class="preview-iframe"
-        sandbox="allow-scripts allow-same-origin"
-        :title="`${pageTitle} demo preview`"
-        loading="lazy"
-      />
-    </div>
+    <!-- ── 2. Unified preview (DemoPreview: desktop/mobile/code modes) ── -->
+    <DemoPreview
+      :demo-url="demoUrl"
+      :style="styleName"
+      :product="productName"
+      :source="meta?.source ?? null"
+      :source-code="sourceCode"
+      class="preview-demo"
+    />
 
-    <!-- ── 3. Demo Source Code (collapsible, SEO-friendly) ──────────── -->
-    <details v-if="sourceCode" class="preview-source">
-      <summary class="preview-source-summary">
-        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor"
-             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="7 13 11 9 7 5"/>
-        </svg>
-        View Demo Source Code
-      </summary>
-      <div class="preview-source-body">
-        <pre class="preview-source-pre"><code class="hljs" v-html="highlightedCode" /></pre>
-        <button class="preview-source-copy" @click="copySource">
-          {{ sourceCopied ? 'Copied!' : 'Copy' }}
-        </button>
-      </div>
-    </details>
-
-    <!-- ── 4. Ad C (728×90) below iframe ──────────────────────────────────── -->
+    <!-- ── 3. Ad C (728×90) below preview ──────────────────────────────────── -->
     <div class="preview-ad-row">
       <AdSlot size="728x90" position="ad-mid-content" />
     </div>
@@ -303,12 +281,6 @@ import { useDemos, loadStyles, loadProducts, generateSlug } from '~/composables/
 import { useDesignSystem } from '~/composables/useDesignSystem'
 import type { DesignSystem, DemoMeta, RawStyle, RawProduct } from '~/types/design-system'
 
-// highlight.js: only load XML/HTML language to keep bundle small
-import hljs from 'highlight.js/lib/core'
-import xml from 'highlight.js/lib/languages/xml'
-import 'highlight.js/styles/github.css'
-hljs.registerLanguage('xml', xml)
-
 // ── Route params ──────────────────────────────────────────────────────────────
 const route  = useRoute()
 const slug   = computed(() => route.params.slug as string)
@@ -498,12 +470,6 @@ const compareLinks = computed(() =>
   }))
 )
 
-// Syntax-highlighted source code
-const highlightedCode = computed(() => {
-  if (!sourceCode.value) return ''
-  return hljs.highlight(sourceCode.value, { language: 'xml' }).value
-})
-
 // ── Share / copy link ─────────────────────────────────────────────────────────
 const shareCopied = ref(false)
 
@@ -522,18 +488,6 @@ async function copyLink() {
     document.body.removeChild(input)
     shareCopied.value = true
     setTimeout(() => { shareCopied.value = false }, 2000)
-  }
-}
-
-const sourceCopied = ref(false)
-
-async function copySource() {
-  try {
-    await navigator.clipboard.writeText(sourceCode.value)
-    sourceCopied.value = true
-    setTimeout(() => { sourceCopied.value = false }, 2000)
-  } catch {
-    // noop
   }
 }
 
@@ -726,35 +680,9 @@ useHead({
   border-color: var(--color-text-muted, #6B7280);
 }
 
-/* ── iframe ───────────────────────────────────────────────────────────────── */
-.preview-iframe-wrap {
-  width: 100%;
-  height: 600px;
-  border: 1px solid var(--color-border, #E5E7EB);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--color-bg, #F8F9FA);
+/* DemoPreview wrapper */
+.preview-demo {
   margin-bottom: 20px;
-}
-
-.preview-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-.preview-iframe-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.preview-iframe-placeholder-text {
-  font-size: 14px;
-  color: var(--color-text-muted, #6B7280);
 }
 
 /* ── Ad rows ──────────────────────────────────────────────────────────────── */
@@ -1083,91 +1011,6 @@ useHead({
   text-decoration: underline;
 }
 
-/* ── Demo Source Code ──────────────────────────────────────────────────────── */
-.preview-source {
-  margin-bottom: 20px;
-  border: 1px solid var(--color-border, #E5E7EB);
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--color-surface, #fff);
-}
-
-.preview-source-summary {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-text, #111827);
-  cursor: pointer;
-  user-select: none;
-  list-style: none;
-}
-
-.preview-source-summary::-webkit-details-marker {
-  display: none;
-}
-
-.preview-source-summary svg {
-  transition: transform 150ms ease;
-  color: var(--color-text-muted, #6B7280);
-}
-
-details[open] .preview-source-summary svg {
-  transform: rotate(90deg);
-}
-
-.preview-source-summary:hover {
-  background: var(--color-bg, #F8F9FA);
-}
-
-.preview-source-body {
-  position: relative;
-  border-top: 1px solid var(--color-border, #E5E7EB);
-}
-
-.preview-source-pre {
-  margin: 0;
-  padding: 16px;
-  max-height: 480px;
-  overflow: auto;
-  background: #F8F9FA;
-  font-size: 12px;
-  line-height: 1.5;
-  tab-size: 2;
-}
-
-.preview-source-pre code {
-  font-family: var(--font-mono, 'SF Mono', 'Fira Code', monospace);
-}
-
-.preview-source-copy {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 4px 10px;
-  font-size: 11px;
-  font-weight: 500;
-  border: 1px solid var(--color-border, #E5E7EB);
-  border-radius: 6px;
-  background: var(--color-surface, #fff);
-  color: var(--color-text-muted, #6B7280);
-  cursor: pointer;
-  font-family: inherit;
-  opacity: 0;
-  transition: opacity 150ms ease;
-}
-
-.preview-source-body:hover .preview-source-copy {
-  opacity: 1;
-}
-
-.preview-source-copy:hover {
-  color: var(--color-text, #111827);
-  border-color: var(--color-text-muted, #6B7280);
-}
-
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   .preview-page {
@@ -1182,10 +1025,7 @@ details[open] .preview-source-summary svg {
     max-width: none;
   }
 
-  .preview-iframe-wrap {
-    height: 420px;
-    border-radius: 8px;
-  }
+
 
   .preview-params-grid {
     grid-template-columns: 1fr;

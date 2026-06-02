@@ -44,6 +44,21 @@
           </svg>
         </button>
 
+        <!-- Code toggle -->
+        <button
+          v-if="sourceCode"
+          class="demo-preview-toggle"
+          :class="{ 'demo-preview-toggle--active': viewMode === 'code' }"
+          title="View source code"
+          aria-label="Switch to source code view"
+          @click="viewMode = 'code'"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M5 4L1 8l4 4M11 4l4 4-4 4" stroke="currentColor" stroke-width="1.4"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
         <!-- Open in new tab -->
         <a
           v-if="demoUrl"
@@ -144,24 +159,45 @@
           </Transition>
         </div>
       </Transition>
+
+      <!-- Code panel -->
+      <Transition name="mode-fade">
+        <div
+          v-if="viewMode === 'code'"
+          key="code-frame"
+          class="demo-preview-code-frame"
+        >
+          <pre class="demo-preview-code-pre"><code class="hljs" v-html="highlightedCode" /></pre>
+          <button class="demo-preview-code-copy" @click="copySource">
+            {{ sourceCopied ? 'Copied!' : 'Copy' }}
+          </button>
+        </div>
+      </Transition>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-export type ViewMode = 'desktop' | 'mobile'
+import hljs from 'highlight.js/lib/core'
+import xml from 'highlight.js/lib/languages/xml'
+import 'highlight.js/styles/github.css'
+hljs.registerLanguage('xml', xml)
+
+export type ViewMode = 'desktop' | 'mobile' | 'code'
 
 const props = withDefaults(defineProps<{
   demoUrl: string | null
   style?: string
   product?: string
   source?: 'official' | 'community' | null
+  sourceCode?: string
   initialMode?: ViewMode
 }>(), {
   demoUrl: null,
   style: '',
   product: '',
   source: null,
+  sourceCode: '',
   initialMode: 'desktop',
 })
 
@@ -171,6 +207,12 @@ const emit = defineEmits<{
 
 const viewMode = ref<ViewMode>(props.initialMode)
 const loading = ref(false)
+const sourceCopied = ref(false)
+
+const highlightedCode = computed(() => {
+  if (!props.sourceCode) return ''
+  return hljs.highlight(props.sourceCode, { language: 'xml' }).value
+})
 
 watch(() => props.demoUrl, (newUrl) => {
   if (newUrl) loading.value = true
@@ -182,6 +224,16 @@ watch(viewMode, (mode) => {
 
 function onLoad() {
   loading.value = false
+}
+
+async function copySource() {
+  try {
+    await navigator.clipboard.writeText(props.sourceCode || '')
+    sourceCopied.value = true
+    setTimeout(() => { sourceCopied.value = false }, 2000)
+  } catch {
+    // noop
+  }
 }
 </script>
 
@@ -455,6 +507,54 @@ function onLoad() {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* ── Code panel ──────────────────────────────────────────────────── */
+.demo-preview-code-frame {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  overflow: auto;
+  background: #F8F9FA;
+}
+
+.demo-preview-code-pre {
+  margin: 0;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.6;
+  tab-size: 2;
+  overflow: auto;
+}
+
+.demo-preview-code-pre code {
+  font-family: var(--font-mono, 'SF Mono', 'Fira Code', monospace);
+}
+
+.demo-preview-code-copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid var(--color-border, #E5E7EB);
+  border-radius: 6px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text-muted, #6B7280);
+  cursor: pointer;
+  font-family: inherit;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.demo-preview-code-frame:hover .demo-preview-code-copy {
+  opacity: 1;
+}
+
+.demo-preview-code-copy:hover {
+  color: var(--color-text, #111827);
+  border-color: var(--color-text-muted, #6B7280);
 }
 
 /* ── Transitions ──────────────────────────────────────────────────────────── */
